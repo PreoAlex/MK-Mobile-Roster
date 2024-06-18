@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>MK Mobile Character List</title>
+
+</head>
+
+<body>
+
+    <h1 class="main-title">Mortal Kombat Mobile Roster</h1>
+
+    <div id="list-interface">
+        <div id="filters-container">
+            <span class="filters-title">Filters</span>
+
+            <br>
+            <br>
+
+            <input type="text" name="filterName" id="filter-name" placeholder="Kharacter Name">
+
+            <br>
+            <br>
+
+            <label for="filter-rarity">Rarity :</label>
+            <select name="filterRarity" id="filter-rarity">
+                <option selected value="Off">Off</option>
+                <option value="1">Bronze</option>
+                <option value="2">Silver</option>
+                <option value="3">Gold</option>
+                <option value="4">Diamond</option>
+            </select>
+
+            <br>
+            <br>
+
+            <label for="filter-variation">Variation :</label>
+
+            <select name="filterVariation" id="filter-variation">
+                <option selected value="Off">Off</option>
+                <option value="NONE">No Variation</option>
+                <option value="Klassic">Klassic</option>
+                <option value="MK11">MK11</option>
+                <option value="MK1">MK1</option>
+                <option value="Circle of Shadow">Circle of Shadow</option>
+                <option value="Nightmare">Nightmare</option>
+                <option value="Day of the Dead">Day of the Dead</option>
+                <option value="Lizard">Lizard</option>
+                <option value="Klassic Movie">Klassic Movie</option>
+                <option value="Kombat Cup">Kombat Cup</option>
+                <option value="Black Dragon">Black Dragon</option>
+                <option value="Ronin">Ronin</option>
+                <option value="Assassin">Assassin</option>
+                <option value="Edenian Blood">Edenian Blood</option>
+                <option value="Strike Force">Strike Force</option>
+                <option value="Kold War">Kold War</option>
+            </select>
+
+            <br>
+            <br>
+
+            <label for="filter-type">Type :</label>
+
+            <select name="filterType" id="filter-type">
+                <option selected value="Off">Off</option>
+                <option value="Elder God">Elder God</option>
+                <option value="Martial Artist">Martial Artist</option>
+                <option value="Netherrealm">Netherrealm</option>
+                <option value="Nomad">Nomad</option>
+                <option value="Outworld">Outworld</option>
+                <option value="Spec Ops">Spec Ops</option>
+                <option value="Martial Artist/Spec Ops">Martial Artist / Spec Ops</option>
+                <option value="Martial Artist/Outworld">Martial Artist / Outworld</option>
+                <option value="Martial Artist/Elder God">Martial Artist / Elder God</option>
+                <option value="Martial Artist/ Netherrealm">Martial Artist / Netherrealm</option>
+                <option value="Netherrealm/ Outworld">Netherrealm / Outworld</option>
+                <option value="Netherrealm/ Elder God">Netherrealm / Elder God</option>
+                <option value="Elder God/Spec Ops">Elder God / Spec Ops</option>
+            </select>
+
+            <br>
+            <br>
+            <br>
+
+            <button onclick="applyFilters()" class="filter-button" enabled>Apply Filters</button>
+        </div>
+
+        <div id="mkm-list">
+
+            <div class="mkm-character">
+
+                <div class="field-container">
+                    <span class="name"> SCORPION </span>
+                </div>
+                <div class="field-container">
+
+                    <span class="variation">
+                        Inferno
+                    </span>
+
+                </div>
+                <div class="field-container">
+                    <span class="rarity">Gold</span>
+                </div>
+                <div class="field-container">
+                    <span class="type">Netherrealm</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
