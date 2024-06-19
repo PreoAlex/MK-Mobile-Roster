@@ -330,15 +330,49 @@ function appendList(index) {
 
 }
 
-function updateListBuffer() {
+function setKharacterCount(count) {
 
-    let listContainer = document.getElementById("mkm-list");
+    let kharCountElem = document.getElementById("kharacter-count");
+
+    if (kharCountElem == null) {
+
+        let listContainer = document.getElementById("mkm-list");
+        let kharCountHTML = '<span id="kharacter-count"></span>';
+
+        listContainer.innerHTML = kharCountHTML.concat(listContainer.innerHTML);
+
+        kharCountElem = document.getElementById("kharacter-count");
+    }
+
+    kharCountElem.textContent = `Kharacter Count : ${count}`;
+
+}
+
+function resetList() {
 
     clearList();
+
+    setKharacterCount(kharacterList.length);
 
     for (let i = 0; i < kharacterList.length; i++) {
         appendList(i);
     }
+
+}
+
+function resetFilters() {
+
+    let nameElem = document.getElementById("filter-name");
+    let rarityElem = document.getElementById("filter-rarity");
+    let variationElem = document.getElementById("filter-variation");
+    let typeElem = document.getElementById("filter-type");
+
+    nameElem.value = "";
+    rarityElem.value = "Off";
+    variationElem.value = "Off";
+    typeElem.value = "Off";
+
+    resetList();
 
 }
 
@@ -359,6 +393,8 @@ function applyFilters() {
 
     clearList();
 
+    let kharCount = 0;
+
     for (let i = 0; i < kharacterList.length; i++) {
 
         let kharName = "" + kharacterList[i].name;
@@ -369,14 +405,17 @@ function applyFilters() {
         if ((!filterName || kharName.includes(nameElem.value)) && (!filterRarity || kharRarity == rarityElem.value) && (!filterVariation || kharVariation == variationElem.value) && (!filterType || kharType == typeElem.value)) {
 
             appendList(i);
+            kharCount += 1;
 
         }
     }
+
+    setKharacterCount(kharCount);
 
 }
 
 // SCRIPT START
 
-updateListBuffer();
+resetList();
 
 document.getElementById("filter-name").addEventListener("input", applyFilters);
