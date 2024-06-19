@@ -92,10 +92,15 @@
             <br>
             <br>
 
-            <button onclick="applyFilters()" class="filter-button" enabled>Apply Filters</button>
+            <div class="button-container">
+                <button onclick="applyFilters()" class="filter-button">Apply Filters</button>
+                <button onclick="resetFilters()" class="filter-button">Reset Filters</button>
+            </div>
         </div>
 
         <div id="mkm-list">
+
+            <span id="kharacter-count"></span>
 
             <div class="mkm-character">
 
