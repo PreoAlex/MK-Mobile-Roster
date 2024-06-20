@@ -90,6 +90,7 @@ const ASSASSIN_VAR = "Assassin";
 const EDENIAN_BLOOD_VAR = "Edenian Blood";
 const STRIKE_FORCE_VAR = "Strike Force";
 const KOLD_VAR = "Kold War";
+const ONSLAUGHT_VAR = "Onslaught";
 
 class Kharacter {
 
@@ -133,6 +134,7 @@ let kharacterList = [
     new Kharacter(ERRON_BLACK, "Gunslinger", R_GOLD, OUTWORLD),
     new Kharacter(FREDDY_KRUEGER, NIGHTMARE_VAR, R_DIAMOND, NETHERREALM),
     new Kharacter(FUJIN, MK11_VAR, R_DIAMOND, ELDER_GOD),
+    new Kharacter(FUJIN, ONSLAUGHT_VAR, R_GOLD, ELDER_GOD),
     new Kharacter(GORO, KLASSIC_VAR, R_DIAMOND, OUTWORLD),
     new Kharacter(GORO, "Tigrar Fury", R_GOLD, OUTWORLD),
     new Kharacter(JACQUI_BRIGGS, NOVAR, R_SILVER, SPEC_OPS),
@@ -203,6 +205,7 @@ let kharacterList = [
     new Kharacter(MILEENA, "Vampiress", R_GOLD, NETHERREALM),
     new Kharacter(MONK, NOVAR, R_BRONZE, MARTIAL_ARTIST),
     new Kharacter(NIGHTWOLF, MK11_VAR, R_DIAMOND, ELDER_GOD),
+    new Kharacter(NIGHTWOLF, COS_VAR, R_DIAMOND, NETHERREALM_ELDER_GOD),
     new Kharacter(NOOB_SAIBOT, KLASSIC_VAR, R_DIAMOND, MARTIAL_ARTIST_NETHERREALM),
     new Kharacter(NOOB_SAIBOT, LIZARD_VAR, R_GOLD, NETHERREALM_OUTWORLD),
     new Kharacter(NOOB_SAIBOT, MK11_VAR, R_DIAMOND, NETHERREALM),
@@ -245,6 +248,7 @@ let kharacterList = [
     new Kharacter(SHINNOK, "Vengeful", R_GOLD, NETHERREALM),
     new Kharacter(SHIRAI_RYU, NOVAR, R_BRONZE, MARTIAL_ARTIST),
     new Kharacter(SINDEL, MK11_VAR, R_DIAMOND, NETHERREALM_OUTWORLD),
+    new Kharacter(SINDEL, EDENIAN_BLOOD_VAR, R_GOLD, OUTWORLD),
     new Kharacter(SKARLET, ASSASSIN_VAR, R_DIAMOND, OUTWORLD),
     new Kharacter(SKARLET, KOLD_VAR, R_DIAMOND, OUTWORLD),
     new Kharacter(SKARLET, MK11_VAR, R_DIAMOND, OUTWORLD),
