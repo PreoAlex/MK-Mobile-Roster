@@ -39,11 +39,9 @@ body {
 
 #list-interface {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: center;
-
-    align-items: self-start;
 }
 
 .main-title {
@@ -147,6 +145,8 @@ label {
 .filter-button {
 
     cursor: pointer;
+
+    letter-spacing: 0.5px;
 
     display: block;
     margin: auto;
@@ -255,4 +255,35 @@ label {
 
 .Diamond {
     background: var(--diamond-gradient);
+}
+
+.up-arrow {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#back-to-top {
+
+    display: inline;
+    z-index: 1;
+
+    cursor: pointer;
+    position: fixed;
+
+    width: 100px;
+    height: 100px;
+
+    bottom: 20px;
+    left: 20px;
+
+    font-family: MK11;
+    letter-spacing: 1px;
+    font-size: 75px;
+
+    border: 2px solid gray;
+    border-radius: 7px;
+
+    color: gray;
+    background-color: rgba(0, 0, 0, 0);
+
 }
