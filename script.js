@@ -418,8 +418,42 @@ function applyFilters() {
 
 }
 
+function goBackToTop() {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+function updateBTTAppearance() {
+
+    let bttButton = document.getElementById("back-to-top");
+
+    if (window.scrollY > 500) {
+
+        bttButton.style.display = "inline";
+
+    } else {
+
+        bttButton.style.display = "none";
+
+    }
+
+    console.log(bttButton.style.display);
+
+}
+
 // SCRIPT START
 
 resetList();
 
+updateBTTAppearance();
+
 document.getElementById("filter-name").addEventListener("input", applyFilters);
+document.getElementById("filter-rarity").addEventListener("input", applyFilters);
+document.getElementById("filter-variation").addEventListener("input", applyFilters);
+document.getElementById("filter-type").addEventListener("input", applyFilters);
+
+window.addEventListener("scroll", updateBTTAppearance);
